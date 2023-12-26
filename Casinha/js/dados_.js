@@ -1,518 +1,439 @@
 var MENU = {
-    "churrasco": [
+    "marmitasdodia": [
         {
-            "id": "ribs-brisket-and-burnt-ends",
-            "img": "./img/cardapio/churrasco/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg",
-            "name": "Joe's KC BBQ",
-            "dsc": "Joe's KC Ribs, Brisket & Burnt Ends",
-            "price": 110.99
+            "id": "marmita-pequena",
+            "img": "./img/cardapio/marmitasdodia/marmitaspequenas.jpeg",
+            "name": "Marmita Pequena",
+            "dsc": "Contém Arroz/feijão/ 1 proteína e 2 acompanhamentos. Marmita 400 grs (PORÇÃO INDIVIDUAL)",
+            "price": 19.90
         },
         {
-            "id": "005-kings-carolina-oink-sampler",
-            "img": "./img/cardapio/churrasco/carolina-bbq-oink-sampler.1340b5a10cedc238cb2280306dd1d5a5.jpg",
-            "name": "Kings BBQ",
-            "dsc": "Carolina BBQ Oink Sampler",
-            "price": 89
+            "id": "marmita-media",
+            "img": "./img/cardapio/marmitasdodia/marmitamedia.jpeg",
+            "name": "Marmita Média",
+            "dsc": "Acompanha Arroz/Feijão/2 carnes e 2 acompanhamentos. Marmita 0,650 grs. (PORÇÃO INDIVIDUAL)",
+            "price": 25.90
         },
         {
-            "id": "texas-monthlys-1-bbq-brisket",
-            "img": "./img/cardapio/churrasco/texas-monthlys-1-bbq-brisket.1006a061be7acae03992e420fbca995a.jpg",
-            "name": "Snow's BBQ",
-            "dsc": "Texas Monthly's #1 BBQ Brisket",
-            "price": 199
+            "id": "marmita-grande",
+            "img": "./img/cardapio/marmitasdodia/marmitagrande.jpeg",
+            "name": "Marmita Grande",
+            "dsc": "Acompanha: Arroz/Feijão/2 carnes e 2 acomp. Marmita 800 grs. (PORÇÃO INDIVIDUAL)",
+            "price": 25.90
         },
         {
-            "id": "whole-brisket-texas-bbq-sauce",
-            "img": "./img/cardapio/churrasco/whole-brisket-texas-barbecue-bbq-sauce.e07ee4818b20ed43d217bf67fedd41ce.jpg",
-            "name": "Franklin Barbecue",
-            "dsc": "Whole Brisket + Texas Barbecue BBQ Sauce",
-            "price": 249
+            "id": "marmita-vegetariana-pequena",
+            "img": "./img/cardapio/marmitasdodia/marmitavegetarianapequena.jpeg",
+            "name": "Marmita Vegetariana Pequena",
+            "dsc": "Acompanha Arroz/Feijão e 3 opções vegetarianas. Marmita 400grs. Clique em PEDIR e veja nossas opções.",
+            "price": 18.90
         },
         {
-            "id": "whole-texas-smoked-brisket",
-            "img": "./img/cardapio/churrasco/whole-texas-smoked-brisket.a5558a25381e271408e197936e7985d8.jpg",
-            "name": "Terry Black's Barbecue",
-            "dsc": "Whole Texas Smoked Brisket",
-            "price": 189
+            "id": "marmita-vegetariana-media",
+            "img": "./img/cardapio/marmitasdodia/marmitavegetarianamedia.jpeg",
+            "name": "Marmita Vegetariana Média",
+            "dsc": "Acompanha: Arroz/Feijão e 3 opções vegetarianas. Marmita 700 grs. Clique em PEDIR e veja nossas opções.",
+            "price": 25.90
         },
         {
-            "id": "mini-trinity-bbq-combo-brisket-ribs-and-links",
-            "img": "./img/cardapio/churrasco/mini-trinity-bbq-combo-brisket-ribs-and-links.245582f593bf64b23b57dfca2be18cfd.jpg",
-            "name": "Bludso's BBQ",
-            "dsc": "Mini Trinity BBQ Combo - Brisket, Ribs & Links",
-            "price": 139
+            "id": "marmita-vegetariana-grande",
+            "img": "./img/cardapio/marmitasdodia/marmitavegetarianagrande.jpeg",
+            "name": "Marmita Vegetariana Grande",
+            "dsc": "Acompanha: Arroz/Feijão e 3 opções vegetarianas. Marmita 800 grs. Clique em PEDIR e veja nossas opções.",
+            "price": 27.90
         },
         {
-            "id": "235203-blue-smoke-baby-back-ribs-backyard-barbecue-chicken-combo",
-            "img": "./img/cardapio/churrasco/blue-smoke-baby-back-ribs-backyard-barbecue-chicken-combo.a95a3e632ae324f719738a2a5c1dff6e.jpg",
-            "name": "Blue Smoke",
-            "dsc": "Blue Smoke Baby Back Ribs + Backyard Barbecue Chicken Combo",
-            "price": 129
+            "id": "marmita-churrasco-media",
+            "img": "./img/cardapio/marmitachurrasco/marmitachurrascomedia.jpeg",
+            "name": "Marmita Vegetariana (Média)",
+            "dsc": "Acompanha: Arroz/Feijão e 3 opções vegetarianas. Marmita 700 grs. Clique em PEDIR e veja nossas opções.",
+            "price": 36.90
         },
         {
-            "id": "006-kings-meat-lovers-special",
-            "img": "./img/cardapio/churrasco/bbq-meat-lovers-special-for-10.36ca670fda4bfa783c2ea9165e068d26.jpg",
-            "name": "Kings BBQ",
-            "dsc": "BBQ Meat Lovers Special for 10",
-            "price": 139
+            "id": "marmita-churrasco-grande",
+            "img": "./img/cardapio/marmitachurrasco/marmitachurrascogrande.jpeg",
+            "name": "Marmita Churrasco (Grande)",
+            "dsc": "Contém: Arroz/Feijão/Alcatra/Toscana/Cupim/tender e 2 acompanhamentos. Embalagem para 800 grs.",
+            "price": 39.90
         },
         {
-            "id": "the-big-ugly-bbq-dinner-for-6",
-            "img": "./img/cardapio/churrasco/the-big-ugly-bbq-dinner-for-6.2dfae7818811adddce85cc1a910881a0.jpg",
-            "name": "Ugly Drum",
-            "dsc": "The Big Ugly BBQ Dinner for 6",
-            "price": 229
+            "id": "individual-contra-file",
+            "img": "./img/cardapio/marmitachurrasco/individualcontrafile.jpeg",
+            "name": "Individual de Contra Filé",
+            "dsc": "Acompanha: arroz/feijão/contra-filé (churrasco)/2 acompanhamentos do dia. Marmita 400 grs",
+            "price": 29.90
         },
         {
-            "id": "17796-mighty-quinns-bbq-sampler-pack",
-            "img": "./img/cardapio/churrasco/mighty-quinns-bbq-sampler-pack.1bfe4a0665edc565756f5241bf25840e.jpg",
-            "name": "Mighty Quinn's BBQ",
-            "dsc": "Mighty Quinn's BBQ Sampler Pack",
-            "price": 169
+            "id": "individual-cupim",
+            "img": "./img/cardapio/marmitachurrasco/individualcupimchurrasco.jpeg",
+            "name": "Individual de Cupim",
+            "dsc": "Acompanha: arroz/feijão/Cupim(churrasco)/2 acompanhamentos do dia. Marmita 400grs",
+            "price": 29.90
         },
         {
-            "id": "post-oak-smoked-half-brisket",
-            "img": "./img/cardapio/churrasco/post-oak-smoked-usda-prime-half-brisket.6f17178dde7d806670bcc73ff11762b3.jpg",
-            "name": "Southside Market & Barbeque",
-            "dsc": "Post Oak Smoked USDA Prime Half Brisket",
-            "price": 109
+            "id": "individual-tender",
+            "img": "./img/cardapio/marmitachurrasco/individualcupimchurrasco.jpeg",
+            "name": "Individual Tender",
+            "dsc": "Acompanha: arroz/feijão/TENDER (churrasco)/2 acompanhamentos do dia. Marmita 400 grs",
+            "price": 19.90
         },
         {
-            "id": "best-of-texas-bbq-combo-serves-14",
-            "img": "./img/cardapio/churrasco/best-of-texas-bbq-combo-serves-14.7ae90266335e539c67e77fed14b43029.jpg",
-            "name": "Snow's BBQ",
-            "dsc": "Best of Texas BBQ Combo - Serves 14",
-            "price": 269
+            "id": "individual-de-frango-grelhado-churrasco",
+            "img": "./img/cardapio/marmitachurrasco/individualfrangogrelhadochurrasco.jpeg",
+            "name": "Individual de FRANGO GRELHADO (Churrasco)",
+            "dsc": "Acompanha: arroz/feijão/FRANGO (churrasco)/2 acompanhamentos do dia. Marmita 400 grs",
+            "price": 23.90
+        },
+        {
+            "id": "individual-toscana-churrasco",
+            "img": "./img/cardapio/marmitachurrasco/individualtoscanachurrasco.jpeg",
+            "name": "Individual de FRANGO GRELHADO (Churrasco)",
+            "dsc": "Acompanha: arroz/feijão/FRANGO (churrasco)/2 acompanhamentos do dia. Marmita 400 grs",
+            "price": 23.90
         }
     ],
-    "burgers": [
+    "porcoes": [
         {
-            "id": "the-gramercy-tavern-burger-4-pack",
-            "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
-            "name": "Gramercy Tavern",
-            "dsc": "The Gramercy Tavern Burger - 4 Pack",
-            "price": 99
+            "id": "arroz-branco",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Arroz Branco",
+            "dsc": "Marmita média (400 grs)",
+            "price": 12.90
         },
         {
-            "id": "shake-shack-shackburger-8-pack",
-            "img": "./img/cardapio/burguers/shake-shack-shackburger-8-pack.973a5e26836ea86d7e86a327becea2b0.jpg",
-            "name": "Shake Shack",
-            "dsc": "Shake Shack ShackBurger® - 8 Pack",
-            "price": 49
+            "id": "arroz-grega",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Arroz à Grega",
+            "dsc": "Marmita média (400 grs)",
+            "price": 15.90
         },
         {
-            "id": "gotts-cheeseburger-kit-for-4",
-            "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
-            "name": "Gott's Roadside",
-            "dsc": "Gott's Complete Cheeseburger Kit for 4",
-            "price": 99
+            "id": "feiao",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Feijão",
+            "dsc": "Marmita média (350 ml)",
+            "price": 12.90
         },
         {
-            "id": "le-big-matt-kit-for-6",
-            "img": "./img/cardapio/burguers/le-big-matt-kit-for-6.1ddae6e382bb3218eeb0fd5247de115a.jpg",
-            "name": "Emmy Squared",
-            "dsc": "Le Big Matt Burger Kit for 6",
-            "price": 99
+            "id": "porcao-fritas",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Porção de Fritas",
+            "dsc": "Marmita média",
+            "price": 23.90
         },
         {
-            "id": "shake-shack-shackburger-16-pack",
-            "img": "./img/cardapio/burguers/shake-shack-shackburger-16-pack.316f8b09144db65931ea29e34869287a.jpg",
-            "name": "Shake Shack",
-            "dsc": "Shake Shack Shackburger® - 16 Pack",
-            "price": 89
+            "id": "porcao-carne",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Porção de Carne",
+            "dsc": "400grs BIFE ACEBOLADO (COXÃO MOLE)",
+            "price": 48.90
         },
         {
-            "id": "21-usda-prime-burgers-pack-of-18-8oz-each",
-            "img": "./img/cardapio/burguers/usda-prime-burgers-pack-of-18-8oz-each.274c67f15aa1c0b210dbf51801706670.jpg",
-            "name": "Peter Luger Steak House",
-            "dsc": "USDA Prime Burgers - Pack of 18 (8oz each)",
-            "price": 175.95
+            "id": "porcao-frango",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Porção de FRANGO",
+            "dsc": "0,400gr FILÉ A MILANESA",
+            "price": 12.90
         },
         {
-            "id": "double-stack-burger-kit-for-4",
-            "img": "./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg",
-            "name": "Holeman & Finch",
-            "dsc": "Double Stack Burger Kit for 4",
-            "price": 79
+            "id": "porcao-cupim",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Porção de CUPIM (Churrasco)",
+            "dsc": "PREPARADO COM CUPIM A GRILL. Tamanho médio (400 grs)",
+            "price": 69.90
         },
         {
-            "id": "goldbelly-burger-bash-pack",
-            "img": "./img/cardapio/burguers/the-burger-bash-package.bd9d12d031865940bbe5faf15f1a62f8.jpg",
-            "name": "Pat LaFrieda Meats",
-            "dsc": "Goldbelly \"Burger Bash\" Pack",
-            "price": 109
+            "id": "porcao-contra-file",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Porção de CONTRA FILÉ",
+            "dsc": "PREPARADO COM CONTRA-FILÉ GRILL.Tamanho médio (400 grs)",
+            "price": 69.90
         },
         {
-            "id": "burger-au-poivre-kit-4-pack",
-            "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
-            "name": "Raoul's",
-            "dsc": "Burger Au Poivre Kit - 4 Pack",
-            "price": 99
+            "id": "porcao-tutu-feijao",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "TUTU de FEIJÂO",
+            "dsc": "Tutu de feijão caseiro c/ bacon e ovo frito.",
+            "price": 19.90
         },
         {
-            "id": "goldbelly-burger-blend-4-lbs",
-            "img": "./img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg",
-            "name": "Flannery Beef",
-            "dsc": "Goldbelly Burger Blend - 4 lbs.",
-            "price": 79
+            "id": "porcao-palitinho-queijo",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Palitinho de Queijo",
+            "dsc": "Unidade",
+            "price": 4.50
         },
         {
-            "id": "gotts-complete-cheeseburger-kit-for-8",
-            "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-8.092aa049d00286fa1733d720decc782e.jpg",
-            "name": "Gott's Roadside",
-            "dsc": "Gott's Complete Cheeseburger Kit for 8",
-            "price": 149
+            "id": "porcao-palitinho-queijo-3",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "3 Palitinhos de Queijo",
+            "dsc": " 3 Unidades",
+            "price": 12.90
         },
         {
-            "id": "gramercy-tavern-burger-kielbasa-combo",
-            "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
-            "name": "Gramercy Tavern",
-            "dsc": "Gramercy Tavern Burger + Kielbasa Combo",
-            "price": 149
-        }
+            "id": "porcao-farofa-bacon",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "Porção de Farofa de BACON",
+            "dsc": "Marmita Média",
+            "price": 21.90
+        },
+        {
+            "id": "porcao-palitinho-creme-avela",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "3 Palitinhos de Creme de Avelã",
+            "dsc": "",
+            "price": 4.50
+        },
+        {
+            "id": "porcao-palitinho-creme-avela-3",
+            "img": "./img/cardapio/porcoes/porcao.png",
+            "name": "3 Palitinhos de Creme de Avelã",
+            "dsc": " 3 Unidades",
+            "price": 14.50
+        },
     ],
-    "sobremesas": [
+    "kitalmoco": [
         {
-            "id": "15259-german-chocolate-killer-brownie-tin-pack",
-            "img": "./img/cardapio/sobremesas/german-chocolate-killer-brownie-tin-pack.5ebc34160f28767a9d94c4da2e04c4b9.jpg",
-            "name": "Killer Brownie®",
-            "dsc": "German Chocolate Killer Brownie®",
-            "price": 39.99
+            "id": "kit-almoco-frango",
+            "img": "./img/cardapio/kitalmoco/KitAlmocoFrango.jpeg",
+            "name": "Kit Almoço FRANGO",
+            "dsc": "MARMITAS SEPARADAS MÉDIAS Contém: Arroz/Feijão/2 Acompanhamentos a sua escolha/Salada. FILÉ A MILANESA",
+            "price": 65.90
         },
         {
-            "id": "jacques-world-famous-chocolate-chip-cookies",
-            "img": "./img/cardapio/sobremesas/jacques-world-famous-chocolate-chip-cookies-6-pack.2217a14c443602493bba88aa9335319a.jpg",
-            "name": "Jacques Torres Chocolate",
-            "dsc": "Jacques' World Famous Chocolate Chip Cookies - 6 Pack",
-            "price": 39.95
+            "id": "kit-almoco-carne",
+            "img": "./img/cardapio/kitalmoco/KitAlmocoCarne.jpeg",
+            "name": "Kit Almoço CARNE",
+            "dsc": "MARMITAS SEPARADAS MÉDIAS Contém: Arroz/Feijão/2 Acompanhamentos a escolha/Salada. BIFE ACEBLADO",
+            "price": 72.90
         },
         {
-            "id": "luigis-original-cannoli-pie",
-            "img": "./img/cardapio/sobremesas/original-cannoli-pie.4cb5b9ba82f57b69b90765fd9f07aa1a.jpg",
-            "name": "The Cannoli Pie Company",
-            "dsc": "Original Cannoli Pie",
-            "price": 69
+            "id": "kit-almoco-combo-churrasco",
+            "img": "./img/cardapio/kitalmoco/KitAlmocoCarne.jpeg",
+            "name": "Kit Almoço COMBO Churrasco",
+            "dsc": "MARMITAS SEPARADAS MÉDIAS Contém: Arroz/Feijão/2 Acompanhamentos á escolha/ 1 COMBO CHURRASCO E SALADA",
+            "price": 105.90
         },
         {
-            "id": "sea-salted-caramel-swirl-cheesecake",
-            "img": "./img/cardapio/sobremesas/sea-salted-caramel-swirl-cheesecake.e2825335433fb7a272a5d77649a6849e.jpg",
-            "name": "Cotton Blues Cheesecake Company",
-            "dsc": "Sea-Salted Caramel Swirl Cheesecake",
-            "price": 65
+            "id": "kit-almoco-contra-file",
+            "img": "./img/cardapio/kitalmoco/KitAlmocoCarne.jpeg",
+            "name": "Kit Almoço CONTRA FILÉ",
+            "dsc": "MARMITAS SEPARADAS MÉDIAS Contém: Arroz/Feijão/2 Acompanhamentos á escolha/PORÇÃO DE CONTRA-FILÉ e Salada.",
+            "price": 119.90
         },
-        {
-            "id": "brooklyn-blackout-cookie-brownie-combo-pack-2-tins",
-            "img": "./img/cardapio/sobremesas/brooklyn-blackout-cookie-brownie-combo-pack-2-tins.d8805325baf6b23b4f01d119dc4531a7.jpg",
-            "name": "Brooklyn Blackout Company",
-            "dsc": "Brooklyn Blackout Cookie + Brownie Combo Pack - 2 Tins",
-            "price": 89
-        },
-        {
-            "id": "best-seller-cupcake-dozen",
-            "img": "./img/cardapio/sobremesas/best-seller-cupcake-dozen.f93b21993f6a2da11c975d45b9b0d08f.jpg",
-            "name": "Crave Cupcakes",
-            "dsc": "Best Seller Cupcake Dozen",
-            "price": 89
-        },
-        {
-            "id": "choose-your-own-ice-cream-donuts-6-pack",
-            "img": "./img/cardapio/sobremesas/choose-your-own-ice-cream-donuts-6-pack.24d0b44765a7c54237fcd7ea9d9d8093.jpg",
-            "name": "Elegant Desserts",
-            "dsc": "Choose Your Own Ice Cream Donuts - 6 Pack",
-            "price": 69
-        },
-        {
-            "id": "17481-jewish-dessert-3-pack",
-            "img": "./img/cardapio/sobremesas/jewish-classics-dessert-pack.7d4b76630f2fe75dcb7bbcf2501b7390.jpg",
-            "name": "Ess-a-Bagel",
-            "dsc": "Jewish Classics Dessert Pack",
-            "price": 89.95
-        },
-        {
-            "id": "dessert-bar-care-package",
-            "img": "./img/cardapio/sobremesas/dessert-bar-care-package.324aa28fe98c9dc67b75aac43376902e.jpg",
-            "name": "Bread and Roses Bakery",
-            "dsc": "Dessert Bar Care Package",
-            "price": 65
-        },
-        {
-            "id": "donut-cookies-12-pack",
-            "img": "./img/cardapio/sobremesas/donut-cookies-12-pack.46f42c61c4a79fd2051a99b2f23e890e.jpg",
-            "name": "Stan's Donuts",
-            "dsc": "Donut Cookies - 12 Pack",
-            "price": 49
-        },
-        {
-            "id": "gulab-jamun-ice-cream-cakes-2-pack",
-            "img": "./img/cardapio/sobremesas/gulab-jamun-ice-cream-cakes-2-pack.c45b4d0750ad22d741f84dc1f26d20e7.jpg",
-            "name": "Malai Ice Cream",
-            "dsc": "Gulab Jamun Ice Cream Cakes - 2 Pack",
-            "price": 79
-        },
-        {
-            "id": "jacques-world-famous-chocolate-chip-cookies-12-pack",
-            "img": "./img/cardapio/sobremesas/jacques-world-famous-chocolate-chip-cookies-12-pack.3b373bdd67cd25084182c21499f675d1.jpg",
-            "name": "Jacques Torres Chocolate",
-            "dsc": "Jacques' World Famous Chocolate Chip Cookies - 12 Pack",
-            "price": 69.95
-        }
+        
     ],
-    "bebidas": [
+    "parmegianas": [
         {
-            "id": "hong-kong-boba-tea-kit-for-6",
-            "img": "./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg",
-            "name": "New Territories",
-            "dsc": "Hong Kong Boba Tea Kit for 6",
-            "price": 59
+            "id": "parmegiana-carne-familia",
+            "img": "./img/cardapio/parmegianas/parmegianadecarnefamilia.jpeg",
+            "name": "Parmegiana de Carne (Família)",
+            "dsc": "Acompanha: Arroz/farofa/batata frita/salada. Serve de 2 a 3 pessoas",
+            "price": 119.90
         },
         {
-            "id": "guys-caliente-margaritas-for-12",
-            "img": "./img/cardapio/bebidas/guys-caliente-margaritas-for-12.ca8c6bc06b8f1039549385ffcebc749d.jpg",
-            "name": "Guy Fieri",
-            "dsc": "Guy's Caliente Margaritas for 12",
-            "price": 69
+            "id": "parmegiana-carne-individual",
+            "img": "./img/cardapio/parmegianas/parmegianadecarneindividual.jpeg",
+            "name": "Parmegiana de Carne (individual)",
+            "dsc": "Marmita pequena arroz/batata palha/bife.",
+            "price": 29.90
         },
         {
-            "id": "woodford-reserve-mint-julep-syrup",
-            "img": "./img/cardapio/bebidas/woodford-reserve-mint-julep-syrup.ef523ac7cbae5f4aba6b058207f490d2.jpg",
-            "name": "Woodford Reserve",
-            "dsc": "Woodford Reserve Mint Julep Syrup",
-            "price": 39
+            "id": "parmegiana-frango-familia",
+            "img": "./img/cardapio/parmegianas/parmegianadefrangofamilia.jpeg",
+            "name": "Parmegiana de Frango Familia",
+            "dsc": "Acompanha: Arroz/farofa/batata frita/salada.",
+            "price": 89.90
         },
         {
-            "id": "new-orleans-hurricane-mix",
-            "img": "./img/cardapio/bebidas/new-orleans-hurricane-mix.4613584fc65cb0787024dd24d2a8f4b3.jpg",
-            "name": "Franco's Hurricane Mix",
-            "dsc": "New Orleans Hurricane Mix",
-            "price": 39
+            "id": "parmegiana-frango-Individual",
+            "img": "./img/cardapio/parmegianas/parmegianadefrangoIndividual.jpeg",
+            "name": "Parmegiana de Frango (Individual)",
+            "dsc": "Marmita pequena arroz/batata palha/filé.",
+            "price": 89.90
         },
-        {
-            "id": "margarita-mix",
-            "img": "./img/cardapio/bebidas/margarita-mix.bd48a000d589d3147b14790af3c33fcd.jpg",
-            "name": "Johnny Sanchez",
-            "dsc": "Margarita Mix",
-            "price": 59
-        },
-        {
-            "id": "woodford-reserve-mint-julep-syrup-2-pack",
-            "img": "./img/cardapio/bebidas/woodford-reserve-mint-julep-syrup-2-pack.0ac76063f151988113cbaabd0eaa829f.jpg",
-            "name": "Woodford Reserve",
-            "dsc": "Woodford Reserve Mint Julep Syrup - 2 Pack",
-            "price": 59
-        },
-        {
-            "id": "unicorn-parade-milkshake-kit-for-8",
-            "img": "./img/cardapio/bebidas/unicorn-parade-milkshake-kit-for-2.9052d04c1cf25b29442048bd3e535f21.jpg",
-            "name": "New Territories",
-            "dsc": "Unicorn Parade Milkshake Kit for 8",
-            "price": 109
-        },
-        {
-            "id": "chickpea-chiller-kit-for-6",
-            "img": "./img/cardapio/bebidas/chickpea-chiller-kit-for-6.4310765c71ba524b5462ea9330d32446.jpg",
-            "name": "The Hummus & Pita Co.",
-            "dsc": "Chickpea Chiller Kit for 6",
-            "price": 89
-        },
-        {
-            "id": "15194-old-honey-barn-mint-julep-mixer-200ml",
-            "img": "./img/cardapio/bebidas/old-honey-barn-mint-julep-mixer-200ml.e0b131d6d9b69963706b43fd4334ab74.jpg",
-            "name": "Old Honey Barn Mint Julep",
-            "dsc": "Old Honey Barn Mint Julep Mixer - 200ml Flask",
-            "price": 25
-        },
-        {
-            "id": "kentucky-derby-mint-julep-gift-set",
-            "img": "./img/cardapio/bebidas/kentucky-derby-mint-julep-gift-set.79720eda4e9c8e3fcf9ecb5c79827f2c.jpg",
-            "name": "Woodford Reserve",
-            "dsc": "Kentucky Derby Mint Julep Gift Set",
-            "price": 59.95
-        },
-        {
-            "id": "002-charleston-bloody-mary-mix-weekender-bold-and-spicy",
-            "img": "./img/cardapio/bebidas/weekender-charleston-bloody-mary-mix-bold-and-spicy.c372868c9937e407a299a22001e210e2.jpg",
-            "name": "Charleston Beverage Company",
-            "dsc": "Weekender | Charleston Bloody Mary Mix Bold & Spicy",
-            "price": 39.95
-        },
-        {
-            "id": "nola-cold-brew-concentrate-bag-in-box",
-            "img": "./img/cardapio/bebidas/nola-cold-brew-concentrate-bag-in-box.3df6fde8bd83f29235565984ae8ed22b.jpg",
-            "name": "Grady's Cold Brew",
-            "dsc": "NOLA Cold Brew Concentrate Bag-in-Box",
-            "price": 40
-        }
     ],
-    "pizzas": [
+    "combochurrasco": [
         {
-            "id": "2-lou-malnatis-deep-dish-pizzas",
-            "img": "./img/cardapio/pizzas/2-lou-malnatis-deep-dish-pizzas.bf0fe065d251a9cca3925b269d443a27.jpg",
-            "name": "Lou Malnati's Pizza",
-            "dsc": "2 Lou Malnati's Deep Dish Pizzas",
-            "price": 67.99
+            "id": "combo-churrasco-1-pessoa",
+            "img": "./img/cardapio/combochurrasco/ComboIndividualChurrasco.jpeg",
+            "name": "Combo Individual Churrasco/ Serve 1 Pessoa",
+            "dsc": "Acompanha: 2 tipos de carne a sua escolha / 2 acompanhamentos do cardápio do dia.*NÃO ACOMPANHA ARROZ E FEIJÃO.",
+            "price": 29.90
         },
         {
-            "id": "23699-choose-your-own-thin-crust-pizza-4-pack",
-            "img": "./img/cardapio/pizzas/choose-your-own-thin-crust-pizza-4-pack.b928a2008eab50c65dc87e59b5952190.jpg",
-            "name": "Bartolini's",
-            "dsc": "Choose Your Own Thin Crust Pizza - 4 Pack",
-            "price": 139
+            "id": "combo-churrasco-2-pessoas",
+            "img": "./img/cardapio/combochurrasco/ComboChurrascoServe2a3pessoas.jpeg",
+            "name": "Combo Churrasco/ Serve 2 a 3 Pessoas",
+            "dsc": "Contra-Filé/Cupim/Filé de frango/Panceta/Toscana/2 ACOMPANHAMENTOS DO DIA. *NÃO ACOMPANHA ARROZ E FEIJÃO.",
+            "price": 65.90
         },
-        {
-            "id": "choose-your-own-new-haven-style-pizza-6-pack",
-            "img": "./img/cardapio/pizzas/choose-your-own-new-haven-style-pizza-6-pack.ab82828afc6172cdd4017556c15e36dd.jpg",
-            "name": "Zuppardi's Apizza",
-            "dsc": "New Haven-Style Pizza - 6 Pack (Choose Your Own)",
-            "price": 79
-        },
-        {
-            "id": "6-lou-malnatis-deep-dish-pizzas",
-            "img": "./img/cardapio/pizzas/6-lou-malnatis-deep-dish-pizzas.f59993181da5d295668c8a6fb856055e.jpg",
-            "name": "Lou Malnati's Pizza",
-            "dsc": "6 Lou Malnati's Deep Dish Pizzas",
-            "price": 116.99
-        },
-        {
-            "id": "wood-fired-pizzas-best-seller-4-pack",
-            "img": "./img/cardapio/pizzas/wood-fired-pizzas-best-seller-4-pack.1653bb05922ba153ac178f8365d27f6d.jpg",
-            "name": "Pizzeria Bianco",
-            "dsc": "Wood Fired Pizzas Best Seller - 4 Pack",
-            "price": 129
-        },
-        {
-            "id": "236991-choose-your-own-deep-dish-pizza-3-pack",
-            "img": "./img/cardapio/pizzas/choose-your-own-deep-dish-pizza-3-pack.4111791511244a4946bb5c9ad2c17da9.jpg",
-            "name": "Bartolini's",
-            "dsc": "Choose Your Own Deep Dish Pizza - 3 Pack",
-            "price": 139
-        },
-        {
-            "id": "choose-your-own-detroit-style-pizza-3-pack",
-            "img": "./img/cardapio/pizzas/detroit-style-pizza-choose-your-own-3-pack.6b6f4909ffd4066d5471e70eac5c3d89.jpg",
-            "name": "Emmy Squared",
-            "dsc": "Detroit-Style Pizza - Choose Your Own 3 Pack",
-            "price": 89
-        },
-        {
-            "id": "brooklyn-pizza-choose-your-own-5-pack",
-            "img": "./img/cardapio/pizzas/brooklyn-pizza-choose-your-own-5-pack.edc4f476a75207d0af840ce6f225f2b3.jpg",
-            "name": "Paesan's Pizza",
-            "dsc": "Brooklyn Pizza - Choose Your Own 5 Pack",
-            "price": 69
-        },
-        {
-            "id": "choose-your-own-chicago-deep-dish-pizza-4-pack",
-            "img": "./img/cardapio/pizzas/chicago-deep-dish-pizza-4-pack.49927daafa8c147fe9bb2a113e56668e.jpg",
-            "name": "My Pi Pizza",
-            "dsc": "Chicago Deep Dish Pizza - 4 Pack",
-            "price": 129
-        },
-        {
-            "id": "4-lou-malnatis-deep-dish-pizzas",
-            "img": "./img/cardapio/pizzas/4-lou-malnatis-deep-dish-pizzas.8c79eb7506b5752ab3387d8174246b17.jpg",
-            "name": "Lou Malnati's Pizza",
-            "dsc": "4 Lou Malnati's Deep Dish Pizzas",
-            "price": 96.99
-        },
-        {
-            "id": "tonys-custom-pizza-3-pack",
-            "img": "./img/cardapio/pizzas/choose-your-own-pizza-3-pack.fcf7a43e38593007ef2857fe16d6dd26.jpg",
-            "name": "Tony's Pizza Napoletana",
-            "dsc": "Choose Your Own Pizza - 3 Pack",
-            "price": 99
-        },
-        {
-            "id": "plain-thin-crust-pizza-4-pack",
-            "img": "./img/cardapio/pizzas/plain-thin-crust-pizza-4-pack.5540e9d166db2f0853643c6517e4a225.jpg",
-            "name": "The Columbia Inn",
-            "dsc": "Plain Thin Crust Pizza - 4 Pack",
-            "price": 79
-        }
     ],
-    "steaks": [
+    "saladas": [
         {
-            "id": "california-reserve-filet-mignon-steaks-gift-box",
-            "img": "./img/cardapio/steaks/california-reserve-filet-mignon-steaks-gift-box.bf226e317aad85f47897ae7e325f790d.jpg",
-            "name": "Flannery Beef",
-            "dsc": "California Reserve Filet Mignon Steaks Gift Box",
-            "price": 129
+            "id": "maionese-legumes-mini",
+            "img": "./img/cardapio/saladas/maionesedelegumesmini.jpeg",
+            "name": "Maionese de Legumes Mini",
+            "dsc": "Mini (0,300GRS)",
+            "price": 14.90
         },
         {
-            "id": "steaks-and-cakes-date-night-dinner-for-2",
-            "img": "./img/cardapio/steaks/valentines-steaks-and-cakes-dinner-for-2.0c63dab635eed46209455dc33cd25ea8.jpg",
-            "name": "Chesapeake Bay Gourmet",
-            "dsc": "Steaks and Cakes Date Night Dinner for 2",
-            "price": 129
+            "id": "maionese-legumes-pequena",
+            "img": "./img/cardapio/saladas/maionesedelegumespequena.jpeg",
+            "name": "Maionese de Legumes Pequena",
+            "dsc": "Pequena 400grs",
+            "price": 18.90
         },
         {
-            "id": "Prime-holiday-steak-sampler-for-10-12",
-            "img": "./img/cardapio/steaks/holiday-sampler-9-pack.2de75ca80282ffe9d064eb757ff7a5a1.jpg",
-            "name": "Saltbrick Prime",
-            "dsc": "Chef Matt's Steak Sampler for 10-12",
-            "price": 179
+            "id": "maionese-legumes-media",
+            "img": "./img/cardapio/saladas/maionesedelegumesmedia.jpeg",
+            "name": "Maionese de Legumes Média",
+            "dsc": "Pequena 650grs",
+            "price": 28.90
         },
         {
-            "id": "bone-in-rib-steak",
-            "img": "./img/cardapio/steaks/bone-in-rib-steak.b13d9d4233035767605f0de9acdce1ab.jpg",
-            "name": "Old Homestead Steakhouse",
-            "dsc": "Bone-in Rib Steak",
-            "price": 159
+            "id": "maionese-legumes-grande",
+            "img": "./img/cardapio/saladas/maionesedelegumesgrande.jpeg",
+            "name": "Maionese de Legumes Grande",
+            "dsc": "Pequena 900grs",
+            "price": 31.90
         },
         {
-            "id": "american-wagyu-gold-grade-top-sirloins",
-            "img": "./img/cardapio/steaks/american-wagyu-gold-grade-sirloins.040dbeb8f8e615b91fa7e513e3dc089c.jpg",
-            "name": "Snake River Farms",
-            "dsc": "American Wagyu Gold Grade Top Sirloins",
-            "price": 119
+            "id": "antepasto-berinjela",
+            "img": "./img/cardapio/saladas/Antepastodeberinjela.jpeg",
+            "name": "Antepasto de Berinjela",
+            "dsc": "Pote 350grs",
+            "price": 19.90
         },
         {
-            "id": "2-peter-luger-steak-pack-b",
-            "img": "./img/cardapio/steaks/peter-luger-steak-pack-b.9feb0300e6be2dfecfa314f2006a2183.jpg",
-            "name": "Peter Luger Steak House",
-            "dsc": "Peter Luger Porterhouse Steaks",
-            "price": 215.95
+            "id": "ovos-codorna",
+            "img": "./img/cardapio/saladas/ovos-de-codorna-temperados.jpeg",
+            "name": "Ovinhos de Codorna",
+            "dsc": "Ovinhos de codorna no vinagrete. Embalagem 350 grs",
+            "price": 12.90
         },
         {
-            "id": "ribeye-prime-steak-gift-box",
-            "img": "./img/cardapio/steaks/ribeye-prime-steak-gift-box.e74cb016baabbb2df73861de8150f29c.jpg",
-            "name": "Churchill's Steakhouse",
-            "dsc": "Ribeye Prime Steak Gift Box",
-            "price": 229
+            "id": "salada-simples",
+            "img": "./img/cardapio/saladas/saladasimples.jpeg",
+            "name": "Salada Simples",
+            "dsc": "ALFACE, TOMATE, PALMITO",
+            "price": 10.90
+        },
+    ],
+    "bebidas":[
+        {
+            "id": "coca-cola",
+            "img": "./img/cardapio/bebidas/cocacola-lata-350ml.png",
+            "name": "Coca-Cola Lata 350ml",
+            "dsc": "",
+            "price": 5.50
         },
         {
-            "id": "dry-aged-usda-prime-black-angus-porterhouse-steak-2-pack",
-            "img": "./img/cardapio/steaks/usda-prime-black-angus-filet-mignon-barrel-cut.6ee213799e7d1848763d12edca18e3b1.jpg",
-            "name": "Pat LaFrieda Meats",
-            "dsc": "Dry-Aged USDA Prime Black Angus Porterhouse Steak - 2 Pack",
-            "price": 96.7
+            "id": "coca-cola-zero",
+            "img": "./img/cardapio/bebidas/cocacolazero-lata-350ml.png",
+            "name": "Coca-Cola ZERO Lata 350ml",
+            "dsc": "",
+            "price": 5.50
         },
         {
-            "id": "california-reserve-ribeye-steak",
-            "img": "./img/cardapio/steaks/california-reserve-ribeye-steak-12-oz.d367c5ae72dd9f89e170662104bef4fc.jpg",
-            "name": "Flannery Beef",
-            "dsc": "California Reserve Ribeye Steak - 12 oz",
-            "price": 32
+            "id": "fanta-uva",
+            "img": "./img/cardapio/bebidas/fantauva-lata-350ml.png",
+            "name": "Coca-Cola Lata 350ml",
+            "dsc": "",
+            "price": 5.50
         },
         {
-            "id": "dry-aged-boneless-ribeye-steak-dinner-kit-for-4",
-            "img": "./img/cardapio/steaks/dry-aged-boneless-ribeye-steak-dinner-for-4.81c3bdc05fe6bdb2c2214709863120e0.jpg",
-            "name": "Chef Francis Mallmann",
-            "dsc": "Dry-Aged Boneless Ribeye Steak Dinner Kit for 4",
-            "price": 225
+            "id": "fanta-laranja",
+            "img": "./img/cardapio/bebidas/fanta-laranja-lata-350ml.jpg",
+            "name": "Fanta Laranja Lata 350ml",
+            "dsc": "",
+            "price": 5.50
         },
         {
-            "id": "california-reserve-filet-mignon-steak",
-            "img": "./img/cardapio/steaks/california-reserve-filet-mignon-steak.ff15071964ec8141d30c2ba05fb117e0.jpg",
-            "name": "Flannery Beef",
-            "dsc": "California Reserve Filet Mignon Steak",
-            "price": 22
+            "id": "agua-tonica",
+            "img": "./img/cardapio/bebidas/Agua-Tonica-Antarctica-Lata-350ml.png",
+            "name": "Coca-Cola Lata 350ml",
+            "dsc": "",
+            "price": 5.50
         },
         {
-            "id": "mesquite-smoked-peppered-beef-tenderloin",
-            "img": "./img/cardapio/steaks/mesquite-smoked-peppered-beef-tenderloin.5c314418a1f75c7057eed686e2fad46f.jpg",
-            "name": "Perini Ranch Steakhouse",
-            "dsc": "Mesquite Smoked Peppered Beef Tenderloin",
-            "price": 165
+            "id": "schweppes-Lata",
+            "img": "./img/cardapio/bebidas/schweppes-citrus-lata-350ml.jpg",
+            "name": "Coca-Cola Lata 350ml",
+            "dsc": "",
+            "price": 5.50
+        },
+        {
+            "id": "coca-cola-600ml",
+            "img": "./img/cardapio/bebidas/coca-cola-600ml.jpg",
+            "name": "Coca-Cola 600ml",
+            "dsc": "",
+            "price": 8.50
+        },
+        {
+            "id": "coca-cola-zero-600ml",
+            "img": "./img/cardapio/bebidas/coca_cola_zero_600ml.jpg",
+            "name": "Coca-Cola ZERO 600ml",
+            "dsc": "",
+            "price": 8.50
+        },
+    ],
+    "sucos":[
+        {
+            "id": "suco-laranja",
+            "img": "./img/cardapio/sucos/suco_de_laranja_500ML.jpg",
+            "name": "Suco Natural de Laranja 500ml",
+            "dsc": "",
+            "price": 9.90
+        },
+        {
+            "id": "suco-laranja-1000",
+            "img": "./img/cardapio/sucos/suco_natural_laranja_1000ml.png",
+            "name": "Suco Natural de Laranja 1000ml",
+            "dsc": "",
+            "price": 18.90
+        },
+        {
+            "id": "suco-acerola",
+            "img": "./img/cardapio/sucos/suconaturaldeacerola.jpeg",
+            "name": "Suco Natural de Acerola 500ml",
+            "dsc": "",
+            "price": 9.90
+        },
+        {
+            "id": "suco-acerola-1000",
+            "img": "./img/cardapio/sucos/suconaturaldeacerola.jpeg",
+            "name": "Suco Natural de Acerola 1000ml",
+            "dsc": "",
+            "price": 18.90
+        },
+        {
+            "id": "suco-morango",
+            "img": "./img/cardapio/sucos/suco_natural_morango_500ml.png",
+            "name": "Suco Natural de Morango 500 ml",
+            "dsc": "",
+            "price": 9.90
+        },
+        {
+            "id": "suco-morango-1000",
+            "img": "./img/cardapio/sucos/suco_natural_morango_1000ml.png",
+            "name": "Suco Natural de Morango 1000 ml",
+            "dsc": "",
+            "price": 18.90
+        },
+        {
+            "id": "suco-maracauja",
+            "img": "./img/cardapio/sucos/suco_de_maracuja_500ML.jpg",
+            "name": "Suco Natural de Maracauja 500 ml",
+            "dsc": "",
+            "price": 9.90
+        },
+        {
+            "id": "suco-maracauja-1000",
+            "img": "./img/cardapio/sucos/suco_de_maracuja_1000ML.jpg",
+            "name": "Suco Natural de Maracauja 1000 ml",
+            "dsc": "",
+            "price": 18.90
         }
     ]
 }
