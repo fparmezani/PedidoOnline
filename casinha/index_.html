@@ -347,7 +347,6 @@
                         <div class="etapa etapa1 active">1</div>
                         <div class="etapa etapa2">2</div>
                         <div class="etapa etapa3">3</div>
-                        <div class="etapa etapa4">4</div>
                     </div>
                     <p class="title-carrinho mt-4">
                         <b id="lblTituloEtapa">Seu carrinho:</b>
@@ -449,49 +448,6 @@
 
                     </div>
 
-                    <div id="formadePagamento" class="row mr-0 ml-0 animated fadeIn hidden">
-                            <span class="badge">Obrigatório</span>
-    
-                            <p class="title-categoria mb-0"><b>Como você prefere pagar?</b></p>
-                            <span class="sub-title-categoria">* Pagamento na entrega</span>
-                
-                            <div class="card card-select mt-2 hidden">
-                                <div class="infos-produto-opcional">
-                                    <p class="mb-0 color-primary">
-                                        <i class="fas fa-plus-circle"></i>&nbsp; Nenhuma forma selecionada
-                                    </p>
-                                </div>
-                            </div>
-
-                            
-                            <div class="card card-address mt-2">
-                                <div class="img-icon-details">
-                                    <!-- <i class="fas fa-coins"></i> -->
-                                    <i class="fas fa-credit-card"></i>
-                                </div>
-                                <div class="infos">
-                                    <p class="name mb-0"><b>Cartão de Crédito ou Débito</b></p>
-                                    <span class="text mb-0">Levar maquininha</span>
-                                </div>
-                            </div>
-
-                            <div class="card card-address mt-2 w-100">
-                                <div class="img-icon-details">
-                                    <img src="./img/icone-pix.svg" height="10px">
-                                </div>
-                                <div class="infos">
-                                    <p class="name mb-0"><b>Pix</b></p>
-                                </div>
-                                <div class="">
-                                    <label for="txtCopieCole"> Copie e Cole o Código PIX</label>
-                                    <input type="text" class="form-control" id="txtCopieCole" value="sdfasdfasdfasd">
-                                    <p><span class="informativo">Copie e cole o código no seu aplicativo de banco para fazer o pagamento</span></p>
-                                    <p><span class="informativo">Não se esqueça de compartilhar o comprovante no whatapp</b></span></p>
-                                </div>
-                            </div>
-                    </div>         
-
-
                     <div id="resumoCarrinho" class="row mr-0 ml-0 animated fadeIn hidden">
                         <div class="col-12">
                             <p class="title-carrinho mt-4">
@@ -523,16 +479,8 @@
                             </div>
                         </div>
 
-                        <div class="col-12">
-                            <p class="title-carrinho mt-4">
-                                <b>Detalhe do Pedido:</b>
-                            </p>
-                        </div>
-                        <div class="col-12">
-                            <label for="txtDetalhe" class="form-label">Detalhe:</label>
-                            <textarea id="txtDetalhe" class="form-control" rows="3" placeholder="Informe aqui seu detalhe do pedido"></textarea>
-                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -556,11 +504,8 @@
                     <a onclick="cardapio.metodos.carregarEndereco()" class="btn btn-yellow float-right" id="btnEtapaPedido">
                         Continuar
                     </a>
-                    <a onclick="cardapio.metodos.formadePagamento()" class="btn btn-yellow float-right hidden" id="btnEtapaEndereco">
-                        Continuar
-                    </a>
-                    <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right hidden" id="btnEtapaPagamento">
-                        Continuar
+                    <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right hidden" id="btnEtapaEndereco">
+                        Revisar pedido
                     </a>
                     <a href="#" class="btn btn-yellow float-right hidden" id="btnEtapaResumo" target="_blank">
                         Enviar pedido

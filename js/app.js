@@ -176,6 +176,7 @@ cardapio.metodos = {
             $("#lblTituloEtapa").text('Seu carrinho:');
             $("#itensCarrinho").removeClass('hidden');
             $("#localEntrega").addClass('hidden');
+            $("#formadePagamento").addClass('hidden');
             $("#resumoCarrinho").addClass('hidden');
 
             $(".etapa").removeClass('active');
@@ -191,6 +192,7 @@ cardapio.metodos = {
             $("#lblTituloEtapa").text('Endereço de entrega:');
             $("#itensCarrinho").addClass('hidden');
             $("#localEntrega").removeClass('hidden');
+            $("#formadePagamento").addClass('hidden');
             $("#resumoCarrinho").addClass('hidden');
 
             $(".etapa").removeClass('active');
@@ -203,7 +205,32 @@ cardapio.metodos = {
             $("#btnVoltar").removeClass('hidden');
         }
 
+
         if (etapa == 3) {
+
+            cardapio.metodos.buscarPix();
+
+            $("#lblTituloEtapa").text('Forma de Pagament0:');
+            $("#itensCarrinho").addClass('hidden');
+            $("#localEntrega").addClass('hidden');
+            $("#formadePagamento").removeClass('hidden');
+            $("#resumoCarrinho").addClass('hidden');
+
+            $(".etapa").removeClass('active');
+            $(".etapa1").addClass('active');
+            $(".etapa2").addClass('active');
+            $(".etapa3").addClass('active');
+
+            $("#btnEtapaPedido").addClass('hidden');
+            $("#btnEtapaEndereco").addClass('hidden');
+            $("#btnEtapaPagamento").removeClass('hidden');
+            $("#btnEtapaResumo").addClass('hidden');
+            $("#btnVoltar").removeClass('hidden');
+        }
+
+
+        if (etapa == 4) {
+
             $("#lblTituloEtapa").text('Resumo do pedido:');
             $("#itensCarrinho").addClass('hidden');
             $("#localEntrega").addClass('hidden');
@@ -213,6 +240,7 @@ cardapio.metodos = {
             $(".etapa1").addClass('active');
             $(".etapa2").addClass('active');
             $(".etapa3").addClass('active');
+            $(".etapa4").addClass('active');
 
             $("#btnEtapaPedido").addClass('hidden');
             $("#btnEtapaEndereco").addClass('hidden');
@@ -344,8 +372,88 @@ cardapio.metodos = {
             return;
         } 
 
-        cardapio.metodos.carregarEtapa(2);
+        let MEU_ENDERECO = cardapio.metodos.verificarCepLocal();
 
+            if(MEU_ENDERECO != null)
+            {
+                $("#txtCEP").val(MEU_ENDERECO.cep);
+                cardapio.metodos.buscarCep();
+                $("#txtNumero").val(MEU_ENDERECO.numero);     
+            }
+
+        cardapio.metodos.carregarEtapa(2);
+    },
+
+    formadePagamento : () => {
+        cardapio.metodos.carregarEtapa(3);
+    },
+
+
+    verificarCepLocal: () =>{
+        var MEU_ENDERECO = localStorage.getItem("MEU_ENDERECO");
+        
+        if(MEU_ENDERECO != "")
+            MEU_ENDERECO =  JSON.parse(MEU_ENDERECO);
+        
+        return MEU_ENDERECO;
+
+    },
+
+    gravarEndereco:()=>{
+        var meuEndereco = {
+            CEP : $("#txtCEP").val(),
+            Endereco : $("#txtEndereco").val(),
+            Numero : $("#txtNumero").val(),
+            Bairro : $("#txtBairro").val(),
+            Complemento : $("#txtComplemento").val(),
+            Cidade : $("#txtCidade").val(),
+            Uf : $("#ddlUf option:selected").val(),
+        }
+
+        localStorage.setItem("meuEndereco",meuEndereco);
+    },
+
+
+    buscarPix: () => {
+
+        // var value = $("#lblValorTotal").html().replace(" ","");
+        // var url = "https://www.gerarpix.com.br/emvqr-static";
+
+        // var request = {
+        //     key_type:"Telefone",
+        //     key:"(11) 96376-7799",
+        //     name:"fdgsdgsd",
+        //     city:"Cosmopolis",
+        //     amount:`${value}`,
+        //     reference:"PEDIDO-ONLINE"
+        // }  
+
+        // fetch(url,{
+        //     method : 'POST',
+        //     body:  request,
+        //     mode: 'no-cors',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        //         "Access-Control-Allow-Origin": "http://127.0.0.1:5500",
+        //         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+        //         "Pragma": "no-cache"
+        //     }   
+        // })
+        // .then(response => {
+        //     if (!response.ok) {
+        //         throw new Error('Network response was not ok');
+        //     }
+        //     // Verifique aqui se você pode realmente ler a resposta
+        //     return response.text(); // ou response.json() se você tem certeza que a resposta é JSON
+        // })
+        // .then(data => console.table(data))
+        // .catch(error => console.error('Erro na chamada POST:', error));
+    },
+
+    copiarConteudo(component) {
+        document.execCommand(component);    
+        cardapio.metodos.mensagem('Código copiado', 'green')
     },
 
     // API ViaCEP
@@ -452,7 +560,9 @@ cardapio.metodos = {
             complemento: complemento
         }
 
-        cardapio.metodos.carregarEtapa(3);
+        localStorage.setItem("MEU_ENDERECO", JSON.stringify(MEU_ENDERECO));
+
+        cardapio.metodos.carregarEtapa(4);
         cardapio.metodos.carregarResumo();
 
     },

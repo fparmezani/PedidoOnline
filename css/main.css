@@ -780,3 +780,9 @@ select.form-control {
     border-radius: 50px;
     margin-bottom: 10px;
 }
+
+
+.informativo{
+    font-size:10px;
+    font-style: italic;
+}
