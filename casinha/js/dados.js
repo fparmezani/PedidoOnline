@@ -195,28 +195,28 @@ var MENU = {
     "kitalmoco": [
         {
             "id": "kit-almoco-frango",
-            "img": "./img/cardapio/kitalmoco/KitAlmocoFrango.jpeg",
+            "img": "./img/cardapio/KitAlmoco/KitAlmocoFrango.jpeg",
             "name": "Kit Almoço FRANGO",
             "dsc": "MARMITAS SEPARADAS MÉDIAS Contém: Arroz/Feijão/2 Acompanhamentos a sua escolha/Salada. FILÉ A MILANESA",
             "price": 65.90
         },
         {
             "id": "kit-almoco-carne",
-            "img": "./img/cardapio/kitalmoco/KitAlmocoCarne.jpeg",
+            "img": "./img/cardapio/KitAlmoco/KitAlmocoCarne.jpeg",
             "name": "Kit Almoço CARNE",
             "dsc": "MARMITAS SEPARADAS MÉDIAS Contém: Arroz/Feijão/2 Acompanhamentos a escolha/Salada. BIFE ACEBLADO",
             "price": 72.90
         },
         {
             "id": "kit-almoco-combo-churrasco",
-            "img": "./img/cardapio/kitalmoco/KitAlmocoCarne.jpeg",
+            "img": "./img/cardapio/KitAlmoco/KitAlmocoCarne.jpeg",
             "name": "Kit Almoço COMBO Churrasco",
             "dsc": "MARMITAS SEPARADAS MÉDIAS Contém: Arroz/Feijão/2 Acompanhamentos á escolha/ 1 COMBO CHURRASCO E SALADA",
             "price": 105.90
         },
         {
             "id": "kit-almoco-contra-file",
-            "img": "./img/cardapio/kitalmoco/KitAlmocoCarne.jpeg",
+            "img": "./img/cardapio/KitAlmoco/KitAlmocoCarne.jpeg",
             "name": "Kit Almoço CONTRA FILÉ",
             "dsc": "MARMITAS SEPARADAS MÉDIAS Contém: Arroz/Feijão/2 Acompanhamentos á escolha/PORÇÃO DE CONTRA-FILÉ e Salada.",
             "price": 119.90
@@ -226,28 +226,28 @@ var MENU = {
     "parmegianas": [
         {
             "id": "parmegiana-carne-familia",
-            "img": "./img/cardapio/parmegianas/parmegianadecarnefamilia.jpeg",
+            "img": "./img/cardapio/Parmegianas/parmegianadecarnefamilia.jpeg",
             "name": "Parmegiana de Carne (Família)",
             "dsc": "Acompanha: Arroz/farofa/batata frita/salada. Serve de 2 a 3 pessoas",
             "price": 119.90
         },
         {
             "id": "parmegiana-carne-individual",
-            "img": "./img/cardapio/parmegianas/parmegianadecarneindividual.jpeg",
+            "img": "./img/cardapio/Parmegianas/parmegianadecarneindividual.jpeg",
             "name": "Parmegiana de Carne (individual)",
             "dsc": "Marmita pequena arroz/batata palha/bife.",
             "price": 29.90
         },
         {
             "id": "parmegiana-frango-familia",
-            "img": "./img/cardapio/parmegianas/parmegianadefrangofamilia.jpeg",
+            "img": "./img/cardapio/Parmegianas/parmegianadefrangofamilia.jpeg",
             "name": "Parmegiana de Frango Familia",
             "dsc": "Acompanha: Arroz/farofa/batata frita/salada.",
             "price": 89.90
         },
         {
             "id": "parmegiana-frango-Individual",
-            "img": "./img/cardapio/parmegianas/parmegianadefrangoIndividual.jpeg",
+            "img": "./img/cardapio/Parmegianas/parmegianadefrangoIndividual.jpeg",
             "name": "Parmegiana de Frango (Individual)",
             "dsc": "Marmita pequena arroz/batata palha/filé.",
             "price": 89.90
@@ -256,14 +256,14 @@ var MENU = {
     "combochurrasco": [
         {
             "id": "combo-churrasco-1-pessoa",
-            "img": "./img/cardapio/combochurrasco/ComboIndividualChurrasco.jpeg",
+            "img": "./img/cardapio/ComboChurrasco/ComboIndividualChurrasco.jpeg",
             "name": "Combo Individual Churrasco/ Serve 1 Pessoa",
             "dsc": "Acompanha: 2 tipos de carne a sua escolha / 2 acompanhamentos do cardápio do dia.*NÃO ACOMPANHA ARROZ E FEIJÃO.",
             "price": 29.90
         },
         {
             "id": "combo-churrasco-2-pessoas",
-            "img": "./img/cardapio/combochurrasco/ComboChurrascoServe2a3pessoas.jpeg",
+            "img": "./img/cardapio/ComboChurrasco/ComboChurrascoServe2a3pessoas.jpeg",
             "name": "Combo Churrasco/ Serve 2 a 3 Pessoas",
             "dsc": "Contra-Filé/Cupim/Filé de frango/Panceta/Toscana/2 ACOMPANHAMENTOS DO DIA. *NÃO ACOMPANHA ARROZ E FEIJÃO.",
             "price": 65.90
@@ -272,49 +272,49 @@ var MENU = {
     "saladas": [
         {
             "id": "maionese-legumes-mini",
-            "img": "./img/cardapio/saladas/maionesedelegumesmini.jpeg",
+            "img": "./img/cardapio/Saladas/maionesedelegumesmini.jpeg",
             "name": "Maionese de Legumes Mini",
             "dsc": "Mini (0,300GRS)",
             "price": 14.90
         },
         {
             "id": "maionese-legumes-pequena",
-            "img": "./img/cardapio/saladas/maionesedelegumespequena.jpeg",
+            "img": "./img/cardapio/Saladas/maionesedelegumespequena.jpeg",
             "name": "Maionese de Legumes Pequena",
             "dsc": "Pequena 400grs",
             "price": 18.90
         },
         {
             "id": "maionese-legumes-media",
-            "img": "./img/cardapio/saladas/maionesedelegumesmedia.jpeg",
+            "img": "./img/cardapio/Saladas/maionesedelegumesmedia.jpeg",
             "name": "Maionese de Legumes Média",
             "dsc": "Pequena 650grs",
             "price": 28.90
         },
         {
             "id": "maionese-legumes-grande",
-            "img": "./img/cardapio/saladas/maionesedelegumesgrande.jpeg",
+            "img": "./img/cardapio/Saladas/maionesedelegumesgrande.jpeg",
             "name": "Maionese de Legumes Grande",
             "dsc": "Pequena 900grs",
             "price": 31.90
         },
         {
             "id": "antepasto-berinjela",
-            "img": "./img/cardapio/saladas/Antepastodeberinjela.jpeg",
+            "img": "./img/cardapio/Saladas/Antepastodeberinjela.jpeg",
             "name": "Antepasto de Berinjela",
             "dsc": "Pote 350grs",
             "price": 19.90
         },
         {
             "id": "ovos-codorna",
-            "img": "./img/cardapio/saladas/ovos-de-codorna-temperados.jpeg",
+            "img": "./img/cardapio/Saladas/ovos-de-codorna-temperados.jpeg",
             "name": "Ovinhos de Codorna",
             "dsc": "Ovinhos de codorna no vinagrete. Embalagem 350 grs",
             "price": 12.90
         },
         {
             "id": "salada-simples",
-            "img": "./img/cardapio/saladas/saladasimples.jpeg",
+            "img": "./img/cardapio/Saladas/saladasimples.jpeg",
             "name": "Salada Simples",
             "dsc": "ALFACE, TOMATE, PALMITO",
             "price": 10.90
@@ -381,56 +381,56 @@ var MENU = {
     "sucos":[
         {
             "id": "suco-laranja",
-            "img": "./img/cardapio/sucos/suco_de_laranja_500ML.jpg",
+            "img": "./img/cardapio/Sucos/suco_de_laranja_500ML.jpg",
             "name": "Suco Natural de Laranja 500ml",
             "dsc": "",
             "price": 9.90
         },
         {
             "id": "suco-laranja-1000",
-            "img": "./img/cardapio/sucos/suco_natural_laranja_1000ml.png",
+            "img": "./img/cardapio/Sucos/suco_natural_laranja_1000ml.png",
             "name": "Suco Natural de Laranja 1000ml",
             "dsc": "",
             "price": 18.90
         },
         {
             "id": "suco-acerola",
-            "img": "./img/cardapio/sucos/suconaturaldeacerola.jpeg",
+            "img": "./img/cardapio/Sucos/suconaturaldeacerola.jpeg",
             "name": "Suco Natural de Acerola 500ml",
             "dsc": "",
             "price": 9.90
         },
         {
             "id": "suco-acerola-1000",
-            "img": "./img/cardapio/sucos/suconaturaldeacerola.jpeg",
+            "img": "./img/cardapio/Sucos/suconaturaldeacerola.jpeg",
             "name": "Suco Natural de Acerola 1000ml",
             "dsc": "",
             "price": 18.90
         },
         {
             "id": "suco-morango",
-            "img": "./img/cardapio/sucos/suco_natural_morango_500ml.png",
+            "img": "./img/cardapio/Sucos/suco_natural_morango_500ml.png",
             "name": "Suco Natural de Morango 500 ml",
             "dsc": "",
             "price": 9.90
         },
         {
             "id": "suco-morango-1000",
-            "img": "./img/cardapio/sucos/suco_natural_morango_1000ml.png",
+            "img": "./img/cardapio/Sucos/suco_natural_morango_1000ml.png",
             "name": "Suco Natural de Morango 1000 ml",
             "dsc": "",
             "price": 18.90
         },
         {
             "id": "suco-maracauja",
-            "img": "./img/cardapio/sucos/suco_de_maracuja_500ML.jpg",
+            "img": "./img/cardapio/Sucos/suco_de_maracuja_500ML.jpg",
             "name": "Suco Natural de Maracauja 500 ml",
             "dsc": "",
             "price": 9.90
         },
         {
             "id": "suco-maracauja-1000",
-            "img": "./img/cardapio/sucos/suco_de_maracuja_1000ML.jpg",
+            "img": "./img/cardapio/Sucos/suco_de_maracuja_1000ML.jpg",
             "name": "Suco Natural de Maracauja 1000 ml",
             "dsc": "",
             "price": 18.90
