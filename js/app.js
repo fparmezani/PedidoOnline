@@ -416,39 +416,39 @@ cardapio.metodos = {
 
     buscarPix: () => {
 
-        // var value = $("#lblValorTotal").html().replace(" ","");
-        // var url = "https://www.gerarpix.com.br/emvqr-static";
+        var value = $("#lblValorTotal").html().replace(" ","");
+        var url = "https://www.gerarpix.com.br/emvqr-static";
 
-        // var request = {
-        //     key_type:"Telefone",
-        //     key:"(11) 96376-7799",
-        //     name:"fdgsdgsd",
-        //     city:"Cosmopolis",
-        //     amount:`${value}`,
-        //     reference:"PEDIDO-ONLINE"
-        // }  
+        var request = {
+            key_type:"Telefone",
+            key:"(11) 96376-7799",
+            name:"fdgsdgsd",
+            city:"Cosmopolis",
+            amount:`${value}`,
+            reference:"PEDIDO-ONLINE"
+        }  
 
-        // fetch(url,{
-        //     method : 'POST',
-        //     body:  request,
-        //     mode: 'no-cors',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        //         "Access-Control-Allow-Origin": "http://127.0.0.1:5500",
-        //         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        //         "Pragma": "no-cache"
-        //     }   
-        // })
-        // .then(response => {
-        //     if (!response.ok) {
-        //         throw new Error('Network response was not ok');
-        //     }
-        //     // Verifique aqui se você pode realmente ler a resposta
-        //     return response.text(); // ou response.json() se você tem certeza que a resposta é JSON
-        // })
-        // .then(data => console.table(data))
-        // .catch(error => console.error('Erro na chamada POST:', error));
+        fetch(url,{
+            method : 'POST',
+            body:  request,
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                "Access-Control-Allow-Origin": "http://127.0.0.1:5500",
+                "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+                "Pragma": "no-cache"
+            }   
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            // Verifique aqui se você pode realmente ler a resposta
+            return response.text(); // ou response.json() se você tem certeza que a resposta é JSON
+        })
+        .then(data => console.table(data))
+        .catch(error => console.error('Erro na chamada POST:', error));
     },
 
     copiarConteudo(component) {
