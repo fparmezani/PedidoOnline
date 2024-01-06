@@ -8,28 +8,68 @@ var MEU_CARRINHO = [];
 var MEU_ENDERECO = null;
 
 var VALOR_CARRINHO = 0;
-var VALOR_ENTREGA = 7.5;
+var VALOR_ENTREGA = 6.0;
 
-var CELULAR_EMPRESA = '5517991234567';
+var CELULAR_EMPRESA = '5511963767799';
 
 cardapio.eventos = {
 
     init: () => {
-        cardapio.metodos.obterItensCardapio();
-        cardapio.metodos.carregarBotaoLigar();
-        cardapio.metodos.carregarBotaoReserva();
-    }
+        
+        var expediente = CONFIG.ambiente == 'dev' 
+                            ? true
+                            : cardapio.eventos.temExpediente(HORARIO);
 
+        if(expediente){
+            cardapio.metodos.obterItensCardapio();
+            cardapio.metodos.carregarBotaoLigar();
+            cardapio.metodos.carregarBotaoReserva();
+            $("#colecao").removeClass("hidden");
+            $("#verMais").removeClass("hidden");
+        }else{
+            var tempFechado = `<span class='btn btn-yellow center'>Desculpe, estamos fechados!<span>`        
+            $("#itensCardapio").append(tempFechado);
+            $("#colecao").addClass("hidden");
+            $("#verMais").addClass("hidden");
+            $("#lnkCardapio")
+                .html("<b>Desculpe, estamos fechados</b>")
+                .addClass("center");
+        }
+    }
+    ,temExpediente: (horario)=>{
+        
+        var now = new Date();
+        var current_time = now.getHours() + ":" + (now.getMinutes()<10?'0':'') + now.getMinutes();
+        var weekday = ["domingo", "segunda-feira", "terca-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"][now.getDay()];
+    
+        for (var i = 0; i < horario.length; i++) {
+            if (horario[i].dia_da_semana === weekday) {
+                if (!horario[i].expediente) {
+                    return false;
+                }
+                if ("horario_inicio_manha" in horario[i] && "horario_fim_manha" in horario[i]) {
+                    if (horario[i].horario_inicio_manha <= current_time && current_time <= horario[i].horario_fim_manha) {
+                        return true;
+                    }
+                }
+                if (horario[i].horario_inicio_noite <= current_time && current_time <= horario[i].horario_fim_noite) {
+                    return true;
+                }
+                return false;
+            }
+        }
+        return false;
+        
+    }
 }
 
 cardapio.metodos = {
 
     // obtem a lista de itens do cardápio
     obterItensCardapio: (categoria = 'marmitasdodia', vermais = false) => {
-
+        
         var filtro = MENU[categoria];
-        console.log(filtro);
-
+        
         if (!vermais) {
             $("#itensCardapio").html('');
             $("#btnVerMais").removeClass('hidden');
@@ -200,8 +240,7 @@ cardapio.metodos = {
             $(".etapa2").addClass('active');
 
             $("#btnEtapaPedido").addClass('hidden');
-            $("#btnEtapaEndereco").removeClass('hidden');
-            $("#btnEtapaResumo").addClass('hidden');
+            $("#btnEtapaPagamento").removeClass('hidden');
             $("#btnVoltar").removeClass('hidden');
         }
 
@@ -223,7 +262,7 @@ cardapio.metodos = {
 
             $("#btnEtapaPedido").addClass('hidden');
             $("#btnEtapaEndereco").addClass('hidden');
-            $("#btnEtapaPagamento").removeClass('hidden');
+            $("#btnEtapaPagamento").addClass('hidden');
             $("#btnEtapaResumo").addClass('hidden');
             $("#btnVoltar").removeClass('hidden');
         }
@@ -244,6 +283,7 @@ cardapio.metodos = {
 
             $("#btnEtapaPedido").addClass('hidden');
             $("#btnEtapaEndereco").addClass('hidden');
+            $("#btnEtapaPagamento").addClass('hidden');
             $("#btnEtapaResumo").removeClass('hidden');
             $("#btnVoltar").removeClass('hidden');
         }
@@ -506,6 +546,9 @@ cardapio.metodos = {
     // validação antes de prosseguir para a etapa 3
     resumoPedido: () => {
 
+        
+        let nome = $("#txtNome").val().trim();
+        let telefone = $("#txtTelefone").val().trim();
         let cep = $("#txtCEP").val().trim();
         let endereco = $("#txtEndereco").val().trim();
         let bairro = $("#txtBairro").val().trim();
@@ -513,6 +556,19 @@ cardapio.metodos = {
         let uf = $("#ddlUf").val().trim();
         let numero = $("#txtNumero").val().trim();
         let complemento = $("#txtComplemento").val().trim();
+
+
+        if (nome.length <= 0) {
+            cardapio.metodos.mensagem('Informe o Nome, por favor.');
+            $("#txtNome").focus();
+            return;
+        }
+
+        if (telefone.length <= 0) {
+            cardapio.metodos.mensagem('Informe o Telefone, por favor.');
+            $("#txtTelefone").focus();
+            return;
+        }
 
         if (cep.length <= 0) {
             cardapio.metodos.mensagem('Informe o CEP, por favor.');
@@ -590,17 +646,55 @@ cardapio.metodos = {
 
     },
 
+    createGUID() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+        }
+        return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+               s4() + '-' + s4() + s4() + s4();
+    },
+
+    getHora() {
+        var agora = new Date(); // Cria um objeto de data com a data e hora atuais
+        var horas = agora.getHours(); // Obtém as horas
+        var minutos = agora.getMinutes(); // Obtém os minutos
+        var segundos = agora.getSeconds(); // Obtém os segundos
+    
+        // Formata os minutos e segundos para sempre terem dois dígitos
+        minutos = minutos < 10 ? '0' + minutos : minutos;
+        segundos = segundos < 10 ? '0' + segundos : segundos;
+    
+        // Retorna a hora formatada como HH:MM:SS
+        return horas + ":" + minutos + ":" + segundos;
+    },
     // Atualiza o link do botão do WhatsApp
     finalizarPedido: () => {
 
         if (MEU_CARRINHO.length > 0 && MEU_ENDERECO != null) {
 
             var texto = 'Olá! gostaria de fazer um pedido:';
-            texto += `\n*Itens do pedido:*\n\n\${itens}`;
+            texto += `\n*Número do Pedido:${cardapio.metodos.createGUID()}`;
+            texto += `\nHorário:${cardapio.metodos.getHora()}`;
+            texto += `\nTipo de Entrega: Delivery`;
+            texto += `\nTempo Estimado: ${CONFIG.tempoEstimadoEntrega}`;
+            texto += `\n---------------------------------------------`;
+
+
+            texto += `\n*Nome:${$("#txtNome").val()}`;
+            texto += `\n*Fone:${$("#txtTelefone").val()}`;
             texto += '\n*Endereço de entrega:*';
             texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`;
             texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
+            texto += `\nItens do pedido:*\n\n\${itens}`;
+            texto += `\n---------------------------------------------`;
+            
+            texto += `\n*Itens:R$ ${(VALOR_CARRINHO).toFixed(2).replace('.', ',')}*`;
+            texto += `\n*Desconto:R$ 0,00*`;
+            texto += `\n*Entrega:R$ ${(VALOR_ENTREGA).toFixed(2).replace('.', ',')}*`;
             texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.', ',')}*`;
+
+            texto += `\n---------------------------------------------`;
+            texto += `\nPagamento do tipo:${$("#gridRadioPagamento").val()}`;
 
             var itens = '';
 

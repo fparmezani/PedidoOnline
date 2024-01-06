@@ -784,5 +784,10 @@ select.form-control {
 
 .informativo{
     font-size:10px;
-    font-style: italic;
+}
+
+.center{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
 }

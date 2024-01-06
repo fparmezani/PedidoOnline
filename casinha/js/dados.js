@@ -1,3 +1,69 @@
+var CONFIG = {
+    ambiente : 'dev',
+    tempoEstimadoEntrega : "30 minutos"
+}
+
+
+var HORARIO = [
+    {
+        dia_da_semana: "domingo",
+        horario_inicio_manha: "10:00",
+        horario_fim_manha: "10:00",
+        horario_inicio_noite: "18:30",
+        horario_fim_noite: "21:00",
+        expediente: false
+    },
+    {
+        dia_da_semana: "segunda-feira",
+        horario_inicio: "10:00",
+        horario_fim: "10:00",
+        horario_inicio_noite: "18:30",
+        horario_fim_noite: "21:00",
+        expediente: true
+    },
+    {
+        dia_da_semana: "terca-feira",
+        horario_inicio: "10:00",
+        horario_fim: "10:00",
+        horario_inicio_noite: "18:30",
+        horario_fim_noite: "21:00",
+        expediente: true
+    },
+    {
+        dia_da_semana: "quarta-feira",
+        horario_inicio: "10:00",
+        horario_fim: "10:00",
+        horario_inicio_noite: "18:30",
+        horario_fim_noite: "21:00",
+        expediente: true
+    },
+    {
+        dia_da_semana: "quinta-feira",
+        horario_inicio: "10:00",
+        horario_fim: "10:00",
+        horario_inicio_noite: "18:30",
+        horario_fim_noite: "21:00",
+        expediente: true
+    },
+    {
+        dia_da_semana: "sexta-feira",
+        horario_inicio: "10:00",
+        horario_fim: "10:00",
+        horario_inicio_noite: "18:30",
+        horario_fim_noite: "21:00",
+        expediente: true
+    },
+    {
+        dia_da_semana: "sábado",
+        horario_inicio: "10:00",
+        horario_fim: "10:00",
+        horario_inicio_noite: "18:30",
+        horario_fim_noite: "21:00",
+        expediente: true
+    }
+];
+
+
 var MENU = {
     "marmitasdodia": [
         {

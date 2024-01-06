@@ -67,7 +67,7 @@
                                 Aproveite nosso cardápio! Escolha o que desejar e recebe em sua casa de forma rápida e segura.
                             </p>
                             <div class="wow fadeIn delay-05s">
-                                <a class="btn btn-yellow mt-4 mr-3" href="index.html#cardapio">
+                                <a class="btn btn-yellow mt-4 mr-3" href="index.html#cardapio" id="lnkCardapio">
                                     Ver cardápio
                                 </a>
                                 <a href="#" class="btn btn-white btn-icon-left mt-4" id="btnLigar">
@@ -175,7 +175,7 @@
                         </h1>
                     </div>
 
-                    <div class="col-12 col-one container-menu wow fadeInUp">
+                    <div class="col-12 col-one container-menu wow fadeInUp" id="colecao">
                         <a id="menu-marmitasdodia" class="btn btn-white btn-sm mr-3 active" onclick="cardapio.metodos.obterItensCardapio('marmitasdodia')"> <i class="fas fa-food"></i>&nbsp; Marmitas do dia</a>    
                         <a id="menu-porcoes" class="btn btn-white btn-sm mr-3 " onclick="cardapio.metodos.obterItensCardapio('porcoes')"> <i class="fas fa-hamburger"></i>&nbsp; Porções</a>    
                         <a id="menu-feijoada" class="btn btn-white btn-sm mr-3 " onclick="cardapio.metodos.obterItensCardapio('feijoada')"> <i class="fas fa-hamburger"></i>&nbsp; Feijoada</a>    
@@ -190,7 +190,7 @@
                         <div class="row" id="itensCardapio">
                         </div>
                     </div>
-                    <div class="col-12 col-one text-center wow fadeInUp">
+                    <div class="col-12 col-one text-center wow fadeInUp" id="verMais">
                         <a id="btnVerMais" class="btn btn-white btn-sm" onclick="cardapio.metodos.verMais()">
                             Ver mais
                         </a>
@@ -364,11 +364,27 @@
 
                     <div id="localEntrega" class="row mr-0 ml-0 animated fadeIn hidden">
 
+
+                        <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Nome:</label>
+                                <input id="txtNome" type="text" class="form-control" placeholder="Informe seu nome"  maxlength="50"/>
+                            </div>
+                        </div> 
+                        
+                        <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label>Telefone:</label>
+                                <input id="txtTelefone" type="text" class="form-control" placeholder="Infome seu telefone (19)99999-999" maxlength="14"/>
+                            </div>
+                        </div> 
+
+
                         <div class="col-12 col-lg-4 col-md-4 col-sm-12">
                             <div class="form-group container-cep">
                                 <label>CEP:</label>
                                 <input id="txtCEP" type="text" class="form-control" />
-                                <a class="btn btn-yellow btn-sm" onclick="cardapio.metodos.buscarCep()">
+                                <a class="btn btn-yellow btn-sm" onclick="cardapio.metodos.buscarCep()" onblur="cardapio.metodos.buscarCep()">
                                     <i class="fa fa-search"></i>
                                 </a>
                             </div>
@@ -449,46 +465,54 @@
 
                     </div>
 
-                    <div id="formadePagamento" class="row mr-0 ml-0 animated fadeIn hidden">
-                            <span class="badge">Obrigatório</span>
-    
-                            <p class="title-categoria mb-0"><b>Como você prefere pagar?</b></p>
-                            <span class="sub-title-categoria">* Pagamento na entrega</span>
-                
-                            <div class="card card-select mt-2 hidden">
-                                <div class="infos-produto-opcional">
-                                    <p class="mb-0 color-primary">
-                                        <i class="fas fa-plus-circle"></i>&nbsp; Nenhuma forma selecionada
-                                    </p>
-                                </div>
+                    <div id="formadePagamento" class="mr-0 ml-0 animated fadeIn hidden">
+                        <div class="row"><p class="badge"><b>*Obrigatório</b></p></div>
+                           
+                        <!-- <div class="mt-4">
+                            <fieldset class="row mb-3">
+                            <legend class="col-form-label pt-0"><b>Forma de Entrega</b></legend>
+                            <div class="col">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadioEntrega" id="gridRadioEntrega1" value="Retirada" checked="">
+                                <label class="form-check-label" for="gridRadios1">
+                                  Retirada
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadioEntrega" id="gridRadioEntrega2" value="Entrega em Casa">
+                                <label class="form-check-label" for="gridRadios2">
+                                  Entrega em casa.
+                                </label>
+                              </div>
                             </div>
+                          </fieldset>
+                        </div>  -->
 
-                            
-                            <div class="card card-address mt-2">
-                                <div class="img-icon-details">
-                                    <!-- <i class="fas fa-coins"></i> -->
-                                    <i class="fas fa-credit-card"></i>
-                                </div>
-                                <div class="infos">
-                                    <p class="name mb-0"><b>Cartão de Crédito ou Débito</b></p>
-                                    <span class="text mb-0">Levar maquininha</span>
-                                </div>
+                        <div class="mt-4">
+                            <fieldset class="row mb-3">
+                            <legend class="col-form-label pt-0"><b>Forma de Pagamento</b></legend>
+                            <div class="col">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadioPagamento" id="gridRadiosPagamento1" value="Cartão de Crédito" checked="checked">
+                                <label class="form-check-label" for="gridRadios1">
+                                  Cartão de Crédito
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadioPagamento" id="gridRadioPagamento1" value="Cartão de Débito">
+                                <label class="form-check-label" for="gridRadios1">
+                                  Cartão de Débito
+                                </label>s
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadioPagamento" id="gridRadioPagamento2" value="Pix">
+                                <label class="form-check-label" for="gridRadios2">
+                                  Pix.
+                                </label>
+                              </div>
                             </div>
-
-                            <div class="card card-address mt-2 w-100">
-                                <div class="img-icon-details">
-                                    <img src="./img/icone-pix.svg" height="10px">
-                                </div>
-                                <div class="infos">
-                                    <p class="name mb-0"><b>Pix</b></p>
-                                </div>
-                                <div class="">
-                                    <label for="txtCopieCole"> Copie e Cole o Código PIX</label>
-                                    <input type="text" class="form-control" id="txtCopieCole" value="sdfasdfasdfasd">
-                                    <p><span class="informativo">Copie e cole o código no seu aplicativo de banco para fazer o pagamento</span></p>
-                                    <p><span class="informativo">Não se esqueça de compartilhar o comprovante no whatapp</b></span></p>
-                                </div>
-                            </div>
+                          </fieldset>
+                        </div> 
                     </div>         
 
 
